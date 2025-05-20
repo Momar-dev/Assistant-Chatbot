@@ -3,31 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
     <title>Momar AI</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button class="chatbot-toggler">
-        <span class="material-symbols-outlined">mode_comment</span>         <span class="material-symbols-outlined">mode_comment</span> 
-        <span class="material-symbols-outlined">close</span> 
-    </button>
-  <div class="chatbot">
-    <header>
-        <h2>Assistant Momar</h2>
-    </header>
-    <ul class="chatbox">
-        <li class="chat incoming">
-            <span class="material-symbols-outlined">smart_toy</span>
-            <p>Salut <br> Bienvenue sur Momar AI comment puis je vous aider ?</p> 
-        </li>
-        <li class="chat outgoing">
-            <p>Lorem ipsum dolor sit amet.</p> 
-        </li>
-    </ul>
-     <div class="chat-input">
-        <textarea placeholder="Entrez votre message ..." required></textarea>
-        <span id="send-btn" class="material-symbols-outlined">Envoyer</span>
-     </div>
-  </div>  
+    <button id="chatButton" onclick="toggleChat()">Discussion</button>
+    <div id="chatContainer">
+        <div class="chat-header">
+            <span>Momar ASSISTANT 🧑🏾‍💻 </span>
+            <button id="minimizeBtn" onclick="toggleChat()">x</button>
+        </div>
+        <div id="chatMessages"></div>
+        <div id="inputGroup">
+            <textarea id="userInput" placeholder="Entrez votre message..."></textarea>
+            <button id="sendBtn" onclick="sendMessage()">
+                <i class="bx bx-paper-plane"></i>
+            </button>            
+        </div>
+    </div>
+<script src="script.js"></script>
 </body>
 </html>
